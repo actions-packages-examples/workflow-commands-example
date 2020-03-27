@@ -19,7 +19,7 @@ jobs:
     - name: Set `NOW` as an environment variable
       run: |
         # This style of environment variable assignment will only be scoped within this step.
-        LOCAL_NOW=`date`
+        LOCAL_NOW=$(date)
         
         # In order to let the next step read `NOW`, we need to use the `set-env` workflow command.
         # https://help.github.com/en/actions/reference/workflow-commands-for-github-actions#setting-an-environment-variable
