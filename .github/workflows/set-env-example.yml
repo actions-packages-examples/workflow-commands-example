@@ -1,0 +1,17 @@
+name: set-env-example
+on: watch
+
+jobs:
+  build:
+
+    if: github.actor == 'francisfuzz'
+    
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Set `color` as an environment variable
+      run: echo "::set-env name=color::yellow"
+
+    - name: Echo the value of `color` 
+      run: echo $color
